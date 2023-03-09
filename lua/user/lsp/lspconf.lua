@@ -53,7 +53,7 @@ end
 local config = {
   -- disable virtual text
   -- the message show after the current line.
-  virtual_text = true,
+  virtual_text = false,
   -- show signs
   signs = {
     active = signs,
@@ -94,6 +94,30 @@ require('lspconfig')['pyright'].setup{
     flags = lsp_flags,
 }
 require('lspconfig')['lua_ls'].setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+}
+require('lspconfig')['bashls'].setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+}
+require('lspconfig')['dockerls'].setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+}
+require('lspconfig')['jsonls'].setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+}
+require('lspconfig')['yamlls'].setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+}
+require('lspconfig')['cmake'].setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+}
+require('lspconfig')['zk'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
 }
