@@ -24,4 +24,7 @@ return require('packer').startup(function(use)
     'hrsh7th/cmp-vsnip', 
     'hrsh7th/vim-vsnip'
   }
+
+  -- Colorscheme
+  use "EdenEast/nightfox.nvim"
 end)
