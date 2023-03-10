@@ -25,6 +25,12 @@ return require('packer').startup(function(use)
     'hrsh7th/vim-vsnip'
   }
 
+  -- Statusline
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+
   -- Colorscheme
   use "EdenEast/nightfox.nvim"
 end)
