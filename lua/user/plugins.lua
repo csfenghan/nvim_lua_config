@@ -31,6 +31,13 @@ return require('packer').startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
 
+  -- Fuzzy find
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    -- or                            , branch = '0.1.x',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+
   -- Colorscheme
   use "EdenEast/nightfox.nvim"
 end)
