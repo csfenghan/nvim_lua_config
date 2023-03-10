@@ -36,7 +36,7 @@ local cmp = require('cmp')
 cmp.setup{
   snippet = {
     expand = function(args)
-      vim.fn["UltiSnips#Anon"](args.body)
+      vim.fn["vsnip#anonymous"](args.body)
     end,
   },
   window = {
@@ -133,7 +133,7 @@ cmp.setup{
       vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
       vim_item.menu = ({
         nvim_lsp = "[LSP]",
-        ultisnips = "[Snippet]",
+        vsnip = "[Snippet]",
         buffer = "[Buffer]",
         path = "[Path]",
       })[entry.source.name]
@@ -143,7 +143,7 @@ cmp.setup{
 
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
-    { name = 'ultisnips' },
+    { name = 'vsnip' },
   }, {
     { name = 'buffer' },
     { name = 'path' },
