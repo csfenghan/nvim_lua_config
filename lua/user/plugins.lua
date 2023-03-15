@@ -46,6 +46,9 @@ return require('packer').startup(function(use)
   -- git
   use {'lewis6991/gitsigns.nvim'}
 
+  -- auto pairs
+  use {'jiangmiao/auto-pairs'}
+
   -- Colorscheme
   use "EdenEast/nightfox.nvim"
 end)
