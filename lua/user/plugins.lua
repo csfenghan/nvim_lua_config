@@ -49,6 +49,9 @@ return require('packer').startup(function(use)
   -- auto pairs
   use {'jiangmiao/auto-pairs'}
 
+  -- float terminal
+  use {'akinsho/toggleterm.nvim'}
+
   -- Colorscheme
-  use "EdenEast/nightfox.nvim"
+  use {'EdenEast/nightfox.nvim'}
 end)
