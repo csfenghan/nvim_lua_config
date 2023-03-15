@@ -39,11 +39,12 @@ return require('packer').startup(function(use)
   }
 
   -- Buffer line
-  -- using packer.nvim
   use {
     'akinsho/bufferline.nvim', tag = "v3.*",
     requires = 'nvim-tree/nvim-web-devicons'
   }
+  -- git
+  use {'lewis6991/gitsigns.nvim'}
 
   -- Colorscheme
   use "EdenEast/nightfox.nvim"
