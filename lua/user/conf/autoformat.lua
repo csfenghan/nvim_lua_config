@@ -8,3 +8,4 @@ function FormatCppCode()
 end
 
 vim.cmd[[ autocmd VimLeave * :lua FormatCppCode() ]]
+vim.cmd[[ autocmd BufDelete * :lua FormatCppCode() ]]
