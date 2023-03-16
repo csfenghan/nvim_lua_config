@@ -21,8 +21,8 @@ return require('packer').startup(function(use)
   }
 
   use {
-    'hrsh7th/cmp-vsnip',
-    'hrsh7th/vim-vsnip'
+    'L3MON4D3/LuaSnip',
+    'saadparwaiz1/cmp_luasnip'
   }
 
   -- Statusline
