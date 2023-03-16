@@ -7,5 +7,4 @@ function FormatCppCode()
   vim.cmd[[ execute '!clang-format -style=file -i '.expand('%:p') ]]
 end
 
-vim.cmd[[ autocmd VimLeave * :lua FormatCppCode() ]]
-vim.cmd[[ autocmd BufDelete * :lua FormatCppCode() ]]
+vim.cmd[[ autocmd BufWritePost * :lua FormatCppCode() ]]
