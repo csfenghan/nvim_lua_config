@@ -39,3 +39,6 @@ map('n', '<leader>hD', function() gs.diffthis('~') end)
 map('n', '<leader>td', gs.toggle_deleted)
 map({'o', 'x'}, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
 
+-- quick change buf
+vim.keymap.set('n', '<A-h>', ":bp<CR>", {noremap = true})
+vim.keymap.set('n', '<A-l>', ":bn<CR>", {noremap = true})
