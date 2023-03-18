@@ -42,3 +42,7 @@ map({'o', 'x'}, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
 -- quick change buf
 vim.keymap.set('n', '<A-h>', ":bp<CR>", {noremap = true})
 vim.keymap.set('n', '<A-l>', ":bn<CR>", {noremap = true})
+
+-- cmp and snip
+vim.cmd("imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>'")
+vim.cmd("inoremap <silent> <S-Tab> <cmd>lua require'luasnip'.jump(-1)<Cr>")
