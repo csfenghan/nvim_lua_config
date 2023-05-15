@@ -4,7 +4,7 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
-vim.keymap.set('n', '<leader>fp', "<cmd>lua require('telescope.builtin').lsp_document_symbols({symbol_width=60})<CR>", {noremap = true})
+vim.keymap.set('n', '<leader>fp', "<cmd>lua require('telescope.builtin').lsp_document_symbols({symbol_width=50})<CR>", {noremap = true})
 
 -- git
 local gs = package.loaded.gitsigns
@@ -46,3 +46,7 @@ vim.keymap.set('n', '<A-l>', ":bn<CR>", {noremap = true})
 -- cmp and snip
 vim.cmd("imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>'")
 vim.cmd("inoremap <silent> <S-Tab> <cmd>lua require'luasnip'.jump(-1)<Cr>")
+
+-- copilot
+vim.g.copilot_no_tab_map = true
+vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })

@@ -54,4 +54,7 @@ return require('packer').startup(function(use)
 
   -- Colorscheme
   use {'EdenEast/nightfox.nvim'}
+
+  -- copilot
+  use {'github/copilot.vim'}
 end)
