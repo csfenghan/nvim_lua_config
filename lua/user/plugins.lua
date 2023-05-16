@@ -46,8 +46,11 @@ return require('packer').startup(function(use)
   -- git
   use {'lewis6991/gitsigns.nvim'}
 
-  -- auto pairs
-  use {'jiangmiao/auto-pairs'}
+  -- pairs
+  use {
+	  "windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+  }
 
   -- float terminal
   use {'akinsho/toggleterm.nvim'}
