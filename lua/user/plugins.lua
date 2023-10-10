@@ -60,4 +60,7 @@ return require('packer').startup(function(use)
 
   -- copilot
   use {'github/copilot.vim'}
+
+  -- log highlighting
+  use {'mtdl9/vim-log-highlighting'}
 end)
